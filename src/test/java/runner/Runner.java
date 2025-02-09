@@ -6,9 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features",
-        glue = "steps"
-
+        features = "src/test/resources/features",
+        glue = "steps",
+        tags = "@casoDropdown", // Ejecuta todos los escenarios de Dropdown
+        plugin = {"pretty", "html:target/cucumber-report.html"}
 
 )
 public class Runner {
